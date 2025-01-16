@@ -1,0 +1,3 @@
+SELECT * FROM employees WHERE department='Sales' AND salary > 100000 OR salary IS NULL; --This query addresses the issue of NULL values in the salary column by adding an 'OR salary IS NULL' condition. This ensures that employees with NULL salaries will also be included if they are in the Sales department.
+
+SELECT * FROM employees WHERE lower(department)='sales' AND salary > 100000 OR salary IS NULL; -- This improved query also handles case sensitivity by using lower() function. This makes the query case-insensitive, ensuring that all 'Sales' records, regardless of capitalization, are included.
