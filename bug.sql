@@ -1,0 +1,3 @@
+SELECT * FROM employees WHERE department='Sales' AND salary > 100000; -- This SQL query might cause issues if the 'salary' column has NULL values.  The condition `salary > 100000` will treat NULL as neither greater than nor less than 100000, effectively excluding employees with NULL salaries from the results even if they are in the 'Sales' department.  This could lead to unexpected data omissions.
+
+Another issue could arise if the 'department' column is case-sensitive and the query does not handle the variation.  If some 'Sales' entries are written as 'sales' or 'SALES', these records will be missed.  To fix both issues, use the following corrected query:
